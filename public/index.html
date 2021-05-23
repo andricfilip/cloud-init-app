@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Filip Andric 35-2017</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stil.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a683718f8.js" crossorigin="anonymous"></script>
+    <script src="js/pocetna.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav_bar">
+        <a class="navbar-brand" href="#"> <i class="fa fa-paw" aria-hidden="true"></i> &nbsp Veterinarska ordinacija </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" id="pocetna"><i class="fas fa-home"></i>&nbsp Početna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="glavna.html#ljubimci" id="novi_ljubimac"><i class="fa fa-dog"></i>&nbsp Ljubimci</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="glavna.html#vlasnici" id="vlasnici"><i class="fas fa-users"></i>&nbsp Vlasnici</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <h1 class="naslov blink">Veterinarska ordinacija Šapica</h1>
+        <br>
+        <br>
+
+        <!--Carousel Wrapper-->
+        <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half galerija" id="galerija" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                <li data-target="#carousel-example-2" data-slide-to="3"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="view">
+                        <img class="d-block w-100" src="slike/s3.jpg" alt="Prva slika">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Dijagnostika i terapija internih bolesti i patoloških stanja</h3>
+                        <p>Internistički pregledi, Laboratorijska dijagnostika, Ultrazvučna dijagnostika, Gastroenterologija, Otorinolaringologija, Pulmologija, Urologija, Endokrinologija, Kardiologija, Poremećaji metabolizma, Psiho-somatski poremećaji,
+                            Saveti u vezi pravilnog držanja, higijene, nege i ishrane bolesnih životinja. Tretmani otitisa (infektivna i strana tela – popino prase)</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="slike/s5.jpg" alt="Druga slika">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Preventiva / Vakcinacije</h3>
+                        <p>Preventiva protiv ekto i endo parazita (buve, krpelji, gliste, srčani crv) <br>Vakcinacija protiv besnila<br> Vakcinacije protiv zaraznih bolesti<br> Saveti u vezi držanja, higijene i ishrane zdravih životinja
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="slike/s6.jpg" alt="Treca slika">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Laboratorijske analize</h3>
+                        <p>Rezultati svake analize se registruju i čuvaju za svakog pojedinačnog pacijenta odvojeno, što olakšava praćenja promena u odnosu na prethodne rezultate iste jedinke.<br> 1. Hematoloske analize <br> 2. Biohemijske analize</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img class="d-block w-100" src="slike/s7.jpg" alt="Cetvrta slika">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">Hirurgija</h3>
+                        <p>Ortopedska hirurgija, Abdominalna hirurgija, Torakalna hirurgija, Neurohirurgija, Ginekološka hirurgija, Sterilizacije i kastracije, Onkološka hirurgija (tumori/ canceri), Vaskularna hirurgija, Maksilofacijelna hirurgija, Stomatološka
+                            hirurgija, Oftalmološka hirurgija</p>
+                    </div>
+                </div>
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Filip Andric 35-2017</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stil.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a683718f8.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav_bar">
+        <a class="navbar-brand" href="index.html"> <i class="fa fa-paw" aria-hidden="true"></i> &nbsp Veterinarska ordinacija </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" id="pocetna"><i class="fas fa-home"></i>&nbsp Početna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ljubimci" id="ljubimci"></i>&nbsp <i class="fa fa-dog"></i>&nbsp Ljubimci</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vlasnici" id="vlasnici"><i class="fas fa-users"></i>&nbsp Vlasnici</a>
+                </li>
+            </ul>
+        </div>
+    </nav> <br><br>
+
+    <div class="container">
+        <div id="tabela"></div>
+        <div id="dodaj"></div>
+    </div>
+    <div id="infoModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="vlasnik_info"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Telefon:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="telefonInfo" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">E-mail:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="emailInfo" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Opis:</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control " id="opisInfo" readonly>
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-group" id="tabelaInfo">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Zatvori</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="ljubimacInfoModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="ljubimac_info"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Vrsta:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="vrstaInfo" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Datum rodjenja:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="datumInfo" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Ime vlasnika:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="vlasnikInfo" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Opis:</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control " id="ljubimacOpis" readonly>
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-group" id="tabelaInfo">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Zatvori</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="dodajLjubimca" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Dodavanje ljubimca</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Ime:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="dodajImeLjubimca" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Vrsta ljubimca:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="dodajVrsta">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Datum rodjenja:</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control " id="dodajDatum" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Vlasnik:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="dodajVlasnikaLjubimca">
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Opis:</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control " id="dodajOpisLjubimca">
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-group" id="tabelaInfo">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="dodajLjubimca()">Dodaj ljubimca</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="dodajVlasnika" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Dodavanje vlasnika</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Ime:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="dodajImeVlasnika" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Prezime:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="dodajPrezimeVlasnika" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Telefon:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="dodajTelefon" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">E-mail:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="dodajEmail" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Opis:</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control " id="dodajOpisVlasnika">
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="dodajVlasnika()">Dodaj vlasnika</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="updateLjubimac" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <input type="hidden" id="updateLjubimacId" />
+                    <h4 class="modal-title">Izmena podataka ljubimca</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Ime:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="updateImeLjubimca" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Vrsta ljubimca:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="updateVrsta">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Datum rodjenja:</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control " id="updateDate" value="2019-05-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Vlasnik:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="updateVlasnik">
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Opis:</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control " id="updateOpisLjubimca">
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-group" id="tabelaInfo">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="updatePet()">Sačuvaj</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="updateVlasnikModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <input type="hidden" id="updateVlasnikId" />
+                    <h4 class="modal-title">Izmena podataka vlasnika</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Ime:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="updateImeVlasnika" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Prezime:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="updatePrezimeVlasnika" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Telefon:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="updateTelefon" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">E-mail:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control " id="updateEmail" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Opis:</label>
+                            <div class="col-sm-10">
+                                <textarea type="text" class="form-control " id="updateOpisVlasnika">
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data onclick="updateOwner()">Sačuvaj</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+﻿/* .naslov,
+#loginpanel {
+    margin-top: 25vh;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+#loginpanel {
+    box-shadow: 5px 5px gray;
+}
+
+.naslov {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+
+.list-group {
+    width: 100%;
+} */
+
+body {
+    height: 100%;
+    margin: auto;
+}
+
+
+/* 
+.sidebar {
+    height: 100vh;
+    padding: 0;
+}
+
+#sideNavMenu {
+    padding: 0;
+}
+
+.nav li {
+    width: 100%;
+}
+
+
+
+.nav {
+    padding: 50px 10px 10px 10px;
+    height: 100vh;
+    width: 100%;
+}
+
+.navbar {
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+#disabled {
+    color: lightgrey;
+}
+
+.glyphicon:hover {
+    cursor: pointer;
+}
+
+.glyphicon:active {
+    cursor: progress;
+}
+
+.glyphicon-trash {
+    color: red;
+}
+
+#tabela {
+    padding: 50px;
+}
+
+#maincontent {
+    float: left;
+}
+
+.dropdown-menu li {
+    padding-left: 10px;
+}
+
+.dropdown-menu li:hover {
+    cursor: pointer;
+}
+
+#tabelaIgre tr td:nth-child(2):hover {
+    cursor: pointer;
+}
+
+#slikaIgre {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    display: block;
+}
+
+.pretraga {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding: 2px;
+    font-size: 12px;
+    height: 24px;
+    padding-left: 5px;
+} */
+
+
+/* ------------------------ */
+
+.naslov {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.nav li:hover {
+    cursor: pointer;
+}
+
+#nav_bar {
+    width: 80%;
+    margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.fas:hover {
+    cursor: pointer;
+}
+
+.fa-info {
+    color: lightskyblue;
+    ;
+}
+
+.fa-trash-alt {
+    color: red;
+}
+
+.fa-pencil-alt {
+    color: darkgreen;
+}
+
+td .fas {
+    margin: 0 10px;
+}
+
+td .fas:hover {
+    transform: scale(1.5);
+}
+
+.alert {
+    display: none;
+    position: relative;
+    width: 500px;
+    margin: 10px auto 0 auto;
+}
